@@ -13,9 +13,14 @@ GET http://localhost:3000/api/getAllUsers?search=john
 
 ###
 
-### Get all users with queries (limit example)
-# Note: queries need to be URL encoded JSON array
-GET http://localhost:3000/api/getAllUsers?queries=["limit(10)"]
+### Get all users with search and empty queries
+GET http://localhost:3000/api/getAllUsers?queries=[]&search=john
+
+###
+
+# Note: Complex queries (like Query.limit()) need to be handled in backend
+# The queries parameter currently expects array format but Appwrite Query objects
+# are better constructed server-side
 
 ###
 
