@@ -1,0 +1,32 @@
+### Get all users (no filters)
+GET http://localhost:3000/api/getAllUsers
+
+###
+
+### Get all users with empty queries
+GET http://localhost:3000/api/getAllUsers?queries=[]
+
+###
+
+### Get all users with search
+GET http://localhost:3000/api/getAllUsers?search=john
+
+###
+
+### Get all users with queries (limit example)
+# Note: queries need to be URL encoded JSON array
+GET http://localhost:3000/api/getAllUsers?queries=["limit(10)"]
+
+###
+
+### Get user by ID
+# Replace :userId with actual user ID
+GET http://localhost:3000/api/getUser/:userId
+
+###
+
+### Delete user by ID
+# Replace :userId with actual user ID
+DELETE http://localhost:3000/api/deleteUser/:userId
+
+###
